@@ -1,0 +1,32 @@
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // For debugging a certain fuzz test, change the name of the test folder, ensure the debug binary
+    // is built, and the CORPUS folder as stated in args exists.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "App Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/fuzz",
+            // for debugging a specific crashfile, uncomment and add the file
+            //"args": ["${workspaceFolder}/minimized-from-04109f37b40a765d15e500197f25b90d9f431a8a"],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },        
+    ]
+}
+
