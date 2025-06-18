@@ -1,12 +1,10 @@
 # fuzz
 A template for fuzzing C projects using LLVMs LibFuzzer
 
-## Usage
-
 ### Build Fuzz Binary
 
 * Add required packages: `sudo apt install clang clang++ llvm make gdb`
-* Check out library/app `<proj_under_test>` to fuzz and this project into the same parent folder
+* Check out library/app `<proj_under_test>` and this repo into a common parent folder
 * Identify .c and .h files via `find <proj_under_test> -name "*.[ch]"`
 * In `fuzz/Makefile`, add folders containing .c files and .c filenames w/o folder; add .h folders
 * If required, add DEFINES and/or LINK_OPTS
